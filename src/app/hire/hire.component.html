@@ -1,0 +1,51 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<div>
+
+</div>
+<div>
+
+</div>
+<div class="container">
+       <table class="table table-striped">
+          <tbody>
+             <tr>
+                <td colspan="1">
+                   <form class="well form-horizontal">
+                      <fieldset>
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">id</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div  class="input-group"><span class="input-group-addon"><i  class="glyphicon glyphicon-user"></i></span>
+                                        <input [(ngModel)]="id" value="" type="text" id="adskill" name="adskill">
+                               </div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">pass</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div  class="input-group"><span class="input-group-addon"><i  class="glyphicon glyphicon-user"></i></span>
+                                        <input [(ngModel)]="pass" value="" type="password" id="adskill" name="adskill">
+                               </div>
+                            </div>
+                         </div>
+                         
+                             
+                        
+                        
+                         
+                         
+                         <div class="form-group">
+                            <div class="col-md-12 inputGroupContainer">
+                                   <a  (click)="login()" class="btn btn-block btn-lg btn-success">Login <span class="glyphicon glyphicon-circle-arrow-right"></span></a>
+                            </div>
+                         </div>
+                      </fieldset>
+                   </form>
+                </td>
+                </tr>
+          </tbody>
+       </table>
+    </div>

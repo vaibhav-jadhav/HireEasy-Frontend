@@ -1,0 +1,34 @@
+<html>
+<head>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><h1>Currents Openings</h1></a>
+  <button (click)="track()">Track</button>
+ 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+ 
+  </div>
+</nav>
+<div *ngFor="let job of jobs">
+                <div class="card myButton"  >
+                <div class="card-body">
+                    <h5 class="card-title">{{this.jobs[0]["title"]}}</h5>
+
+                    <p class="card-text"> Company : {{job["company"]}}</p>
+                    <p class="card-text"> Post : {{job["post"]}}</p>
+                    <p class="card-text"> Experience: {{job["exp"]}}</p>
+                    <p class="card-text"> Description : {{job["desc"]}}</p>
+                    <p class="card-text"> Responsibilities : {{job["resp"]}}</p>
+                    <p class="card-text"> Skills : {{job["skills"]}}</p>
+                    <a (click)="apply(job)"  class="btn btn-primary">Apply</a>
+                </div>
+</div>
+
+</div>
+</body>
+</html>

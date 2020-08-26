@@ -1,0 +1,145 @@
+ <html>
+ <body>
+ <div>
+ <div class="row">
+        <div class="col-2">
+        </div>
+        <div class="col-10">
+        <h1>Update status of Application</h1>
+        </div>
+        
+ </div>
+ </div>
+    <div class="row">
+             <div class="col-2"></div>       
+                <div class="col-8">
+                     <div>
+                                        <ul>
+                                  <div *ngFor="let recipient of this.prev_state | keyvalue">
+                                       <div class="row">
+                                <div class="col-6 ">
+                                                     <h4>{{recipient.key}}</h4> 
+                                        </div>
+                                         <div class="col-6">
+                                               <h3> {{recipient.value}}</h3>
+                                                    </div>
+                                           </div>
+                                            
+                                      </div>
+                                 </ul>
+                          </div>
+ 
+                </div>    
+                   <div class="col-2"></div>         
+    </div>
+
+
+
+
+        <div class="container">
+        <div><h3>Schedule an interview</h3></div>
+       <table class="table table-striped">
+          <tbody>
+             <tr>
+                <td colspan="1">
+                   <form class="well form-horizontal">
+                      <fieldset>
+                         
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">title</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                               <input  [(ngModel)]="title" id="addressLine1" name="addressLine1" placeholder="title" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                             
+                        
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">link</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                               <input   [(ngModel)]="link" id="email" name="email" placeholder="link" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">time</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                               <input [(ngModel)]="time" type="date" id="birthday" name="birthday">
+                               <input [(ngModel)]="date"  id="phoneNumber" name="phoneNumber" placeholder="time" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">Other note</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-file"></i></span>
+                               <input [(ngModel)]="note"  id="phoneNumber" name="phoneNumber" placeholder="any other note" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <div class="col-md-12 inputGroupContainer">
+                                   <a  (click)="updateinterview()" class="btn btn-block btn-lg btn-success">Update <span class="glyphicon glyphicon-circle-arrow-right"></span></a>
+                            </div>
+                         </div>
+                      </fieldset>
+                   </form>
+                </td>
+                </tr>
+          </tbody>
+       </table>
+    </div>
+    
+    
+
+
+
+
+
+
+        <div class="container">
+        <div><h3>Update status and feedback</h3></div>
+       <table class="table table-striped">
+          <tbody>
+             <tr>
+                <td colspan="1">
+                   <form class="well form-horizontal">
+                      <fieldset>
+                         
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">status</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                               <input  [(ngModel)]="status" id="addressLine1" name="addressLine1" placeholder="status" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                             
+                        
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">feedback</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                               <input   [(ngModel)]="feedback" id="email" name="email" placeholder="feedback" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+
+
+                         <div class="form-group">
+                            <div class="col-md-12 inputGroupContainer">
+                                   <a  (click)="feedupdate()" class="btn btn-block btn-lg btn-success">Update <span class="glyphicon glyphicon-circle-arrow-right"></span></a>
+                            </div>
+                         </div>
+                      </fieldset>
+                   </form>
+                </td>
+                </tr>
+          </tbody>
+       </table>
+    </div>
+
+
+
+ </body>
+ </html>
+ 
+ 
+ 

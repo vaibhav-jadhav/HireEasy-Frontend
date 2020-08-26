@@ -1,0 +1,70 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<div>
+   <h1>JobApplication for {{this.prev_state['title']}}</h1>
+</div>
+<div>
+   <h4>At  :{{this.prev_state['company']}}</h4>
+</div>
+<div class="container">
+       <table class="table table-striped">
+          <tbody>
+             <tr>
+                <td colspan="1">
+                   <form class="well form-horizontal">
+                      <fieldset>
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">Full Name</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div  class="input-group"><span class="input-group-addon"><i  class="glyphicon glyphicon-user"></i></span>
+                                        <input [(ngModel)]="Name" value="" type="text" id="adskill" name="adskill">
+                               </div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">Address</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                               <input  [(ngModel)]="Adress" id="addressLine1" name="addressLine1" placeholder="Address Line 1" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                             
+                        
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">Email</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                               <input   [(ngModel)]="Email" id="email" name="email" placeholder="Email" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">Phone Number</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                               <input [(ngModel)]="phone"  id="phoneNumber" name="phoneNumber" placeholder="Phone Number" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">Resume Link</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-file"></i></span>
+                               <input [(ngModel)]="resume"  id="phoneNumber" name="phoneNumber" placeholder="Paste resume link here" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <div class="col-md-12 inputGroupContainer">
+                                   <a  (click)="apply()" class="btn btn-block btn-lg btn-success">Apply <span class="glyphicon glyphicon-circle-arrow-right"></span></a>
+                            </div>
+                         </div>
+                      </fieldset>
+                   </form>
+                </td>
+                </tr>
+          </tbody>
+       </table>
+    </div>
+    <div>
+    <h2>{{this.uniqueid}}</h2>
+    </div>
